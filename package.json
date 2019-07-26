@@ -1,10 +1,10 @@
 {
-  "name": "zappy-app",
-  "version": "1.0.0",
+  "name": "zappy",
   "description": "zappy is a tool built using nodejs with the aim of listening to specific messages and get relevant data from twitter",
-  "main": "server.js",
+  "version": "0.0.0",
   "scripts": {
-    "test": "npm run test"
+    "start": "node ./bin/www",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -13,12 +13,23 @@
   "keywords": [
     "Nodejs",
     "Slack",
-    "Angular"
+    "Angular4"
   ],
   "author": "Wesam Mustafa",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/wesammustafa/zappy/issues"
   },
-  "homepage": "https://github.com/wesammustafa/zappy#readme"
+  "homepage": "https://github.com/wesammustafa/zappy#readme",
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.0.0",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "mongoose": "^5.6.6",
+    "morgan": "~1.9.1",
+    "twitter": "^1.7.1"
+  }
 }
