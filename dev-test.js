@@ -8,8 +8,7 @@ const TweetService = require('./services/TweetService');
     const formattedTweets = TweetService.format(tweets);
     const removedCount = await TweetService.deleteMany({});
     const result = await TweetService.insertMany(formattedTweets, { ordered: true, rawResult: false });
-    const last = await TweetService.find({}, '-tweetId');
-    console.log(last);
+    const last = await TweetService.find({});
   } catch (err) {
     console.log(err);
   }
