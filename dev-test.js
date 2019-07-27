@@ -1,14 +1,15 @@
-const client = require("../config/twitter_client_set_up");
-require("dotenv").config();
-const params = { user_id: 935805382236176384 };
-const fetchTweets = async function () {
-  return new Promise(function (resolve, reject) {
-    client.get("statuses/user_timeline", params, function (err, tweets, response) {
-      if (err) reject(err);
-      console.log(tweets);
-      resolve(tweets);
-    });
-  });
-}
+require('dotenv').config();
+require('./database');
+const TweetService = require('./services/TweetService');
 
-const result = await fetchTweets();
+(async () => {
+  try {
+    const tweets = await TweetService.fetch();
+    const result = await TweetService.save(tweets);
+    console.log(result);
+  } catch (err) {
+    console.log(err);
+  }
+  // const formatted = TweetService.formattedTweets(tweets);
+  // console.log(formatted);
+})();

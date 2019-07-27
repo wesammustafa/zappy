@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+
 const { Schema } = mongoose;
 
 const tweetSchema = new Schema({
@@ -6,31 +7,31 @@ const tweetSchema = new Schema({
     type: String,
     trim: true,
     required: true,
-    index: true
+    index: true,
   },
   text: {
     type: String,
     lowercase: true,
     trim: true,
-    default: ''
+    default: '',
   },
   entities: Schema.Types.Mixed,
   user: Schema.Types.Mixed,
   retweetCount: {
     type: Number,
-    required: true
-  }
+    default: 0,
+    required: true,
+  },
 },
-  {
-    autoIndex: false,
-    writeConcern: {
-      w: 'majority',
-      j: true,
-      wtimeout: 1000
-    },
-    timestamps: true
-  }
-);
+{
+  autoIndex: false,
+  writeConcern: {
+    w: 'majority',
+    j: true,
+    wtimeout: 1000,
+  },
+  timestamps: true,
+});
 
 tweetSchema.set('toObject', { getters: true });
 const Tweet = mongoose.model('Tweet', tweetSchema);
