@@ -1,14 +1,13 @@
 require('dotenv').config();
 require('./database');
-const TweetService = require('./services/TweetService');
+// const TweetService = require('./services/TweetService');
+const TweetController = require('./controllers/TweetController');
 
 (async () => {
   try {
-    const tweets = await TweetService.fetch();
-    const formattedTweets = TweetService.format(tweets);
-    const removedCount = await TweetService.deleteMany({});
-    const result = await TweetService.insertMany(formattedTweets, { ordered: true, rawResult: false });
-    const last = await TweetService.find({});
+    const tweets = await TweetController.save();
+    console.log(tweets);
+
   } catch (err) {
     console.log(err);
   }

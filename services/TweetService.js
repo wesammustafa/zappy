@@ -3,12 +3,12 @@ const client = require('../config/twitter_client_set_up');
 
 class TweetService {
   /**
-   * insertMany function is responsible for saving new tweets into database
+   * insert function is responsible for saving new tweets into database
    * @param {Array} tweets - Tweets to be saved
    * @param {Object} options - Options to be passed to insertMany function
    * @returns {Promise} - Promise Object represent the successfully saved tweets
    */
-  static async insertMany(tweets = [], options) {
+  static async insert(tweets = [], options) {
     return Tweet.insertMany(tweets, options);
   }
 
@@ -33,7 +33,7 @@ class TweetService {
   }
 
   /**
-   * fetch function function is responsible for fetching tweets
+   * fetch function is responsible for fetching tweets
    * from `FictionFone` account
    * @returns {Promise} - Promise object represents tweets
    */
@@ -46,10 +46,11 @@ class TweetService {
   }
 
   /**
+   * function to delete documents based on some conditions
    * @param  {Object} conditions - Conditions to match documents to remove
    * @returns {Number} - Number of documents removed
    */
-  static async deleteMany(conditions) {
+  static async delete(conditions) {
     const res = await Tweet.deleteMany(conditions);
     return res.deletedCount;
   }
@@ -60,7 +61,7 @@ class TweetService {
    * @param  {Object} options - Options Object to query and customize result
    * @returns {Array} - Array of tweets documents
    */
-  static async find(filter, projection, options) {
+  static async get(filter, projection, options) {
     return Tweet.find(filter, projection, options);
   }
 }

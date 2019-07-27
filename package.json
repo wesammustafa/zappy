@@ -3,7 +3,7 @@
   "description": "zappy is a tool built using nodejs with the aim of listening to specific messages and get relevant data from twitter",
   "version": "0.0.0",
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "node --inspect ./bin/www",
     "test": "mocha",
     "eslint": "eslint .",
     "document": "jsdoc"
