@@ -8,11 +8,12 @@ class TweetController {
    */
   static async save() {
     const promises = {};
-    const tweets = await TweetService.fetch();
+    const params = { user_id: process.env.FICTIONFONE_ID };
+    const tweets = await TweetService.fetch(params);
     promises.formattedTweets = TweetService.format(tweets);
     promises.removedCount = TweetService.delete({});
     const { formattedTweets } = await Promise.props(promises);
-    return TweetService.insert(formattedTweets, { ordered: true, rawResult: false });
+    return TweetService.save(formattedTweets, { ordered: true, rawResult: false });
   }
 
   /**

@@ -8,7 +8,7 @@ class TweetService {
    * @param {Object} options - Options to be passed to insertMany function
    * @returns {Promise} - Promise Object represent the successfully saved tweets
    */
-  static async insert(tweets = [], options) {
+  static async save(tweets = [], options) {
     return Tweet.insertMany(tweets, options);
   }
 
@@ -37,8 +37,7 @@ class TweetService {
    * from `FictionFone` account
    * @returns {Promise} - Promise object represents tweets
    */
-  static async fetch() {
-    const params = { user_id: process.env.FICTIONFONE_ID };
+  static async fetch(params) {
     return new Promise((resolve, reject) => client.get('statuses/user_timeline', params, (err, tweets) => {
       if (err) return reject(err);
       return resolve(tweets);

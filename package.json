@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "start": "node --inspect ./bin/www",
-    "test": "mocha",
+    "test": "mocha tests/**/*.*",
     "eslint": "eslint .",
     "document": "jsdoc"
   },
@@ -36,10 +36,13 @@
     "twitter": "^1.7.1"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.18.2",
     "jsdoc": "^3.6.3",
-    "mocha": "^6.2.0"
+    "mocha": "^6.2.0",
+    "sinon": "^7.3.2"
   }
 }

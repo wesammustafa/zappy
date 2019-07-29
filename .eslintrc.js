@@ -16,6 +16,7 @@ module.exports = {
     "upload": true,
     "describe": true,
     "beforeEach": true,
+    "afterEach": true,
     "it": true
   },
   "rules": {
