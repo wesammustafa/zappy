@@ -16,7 +16,9 @@ These instructions will get you a copy of the project up and running on your loc
 - MongoDB: v3.6.3
 - Ngrok [Ngrok](https://ngrok.com/)
 
-```Example:
+Example:
+
+```description
 npm install -g @angular/cli
 ng new my-app
 cd my-app
@@ -38,7 +40,9 @@ in order to be able to integrate with slack webhooks through localhost:3000
 
 - Open your slack webhooks setting to add the new host that ngrok gives you. If you find it hard to setup you can read step from slack docs here [https://api.slack.com/custom-integrations/outgoing-webhooks](https://api.slack.com/custom-integrations/outgoing-webhooks)
 
-```Example:
+Example:
+
+```description
 cd zappy
 npm start
 cd zappy-front
