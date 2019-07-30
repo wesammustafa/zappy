@@ -61,51 +61,51 @@ Now lets walk through steps to test out app:
 - Run "npm run test" in the terminal
 - You should see all the passed and failed tests
 
-### coding style
+### coding style 
 
-Eslint to enforce "airbnb-base" coding style
-JSDoc API documentation to document everything
+    Eslint to enforce "airbnb-base" coding style
+    JSDoc API documentation to document everything
 
 ## Project Folder Structure
 
-`├── app.js
- ├── bin
- │   └── www
- ├── config
- │   └── twitter_client_set_up.js
- ├── controllers
- │   └── TweetController.js
- ├── database.js
- ├── models
- │   └── tweet.js
- ├── package.json
- ├── package-lock.json
- ├── public
- │   ├── images
- │   ├── javascripts
- │   └── stylesheets
- ├── Readme.md
- ├── routes
- │   ├── index.js
- │   └── tweets.js
- ├── services
- │   └── TweetService.js
- ├── tests
- │   └── unit
- ├── views
- │   ├── error.jade
- │   ├── index.jade
- │   └── layout.jade
- └── zappy-front
-     ├── angular.json
-     ├── e2e
-     ├── node_modules
-     ├── package.json
-     ├── package-lock.json
-     ├── README.md
-     ├── src
-     ├── tsconfig.json
-     └── tslint.json`
+    ├── app.js
+    ├── bin
+    │   └── www
+    ├── config
+    │   └── twitter_client_set_up.js
+    ├── controllers
+    │   └── TweetController.js
+    ├── database.js
+    ├── models
+    │   └── tweet.js
+    ├── package.json
+    ├── package-lock.json
+    ├── public
+    │   ├── images
+    │   ├── javascripts
+    │   └── stylesheets
+    ├── Readme.md
+    ├── routes
+    │   ├── index.js
+    │   └── tweets.js
+    ├── services
+    │   └── TweetService.js
+    ├── tests
+    │   └── unit
+    ├── views
+    │   ├── error.jade
+    │   ├── index.jade
+    │   └── layout.jade
+    └── zappy-front
+        ├── angular.json
+        ├── e2e
+        ├── node_modules
+        ├── package.json
+        ├── package-lock.json
+        ├── README.md
+        ├── src
+        ├── tsconfig.json
+        └── tslint.json
 
 ## Authors
 
