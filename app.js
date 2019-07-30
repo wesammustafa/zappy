@@ -1,5 +1,18 @@
 const createError = require('http-errors');
 const express = require('express');
+
+const app = express();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
+
+io.on('connection', (socket) => {
+  // eslint-disable-next-line no-console
+  console.log(`New socket with id: ${socket.id} connected`);
+});
+
+const PORT = 8000;
+io.listen(PORT);
+global.io = io;
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
@@ -7,7 +20,6 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const tweetsRouter = require('./routes/tweets');
 
-const app = express();
 require('dotenv').config();
 require('./database');
 

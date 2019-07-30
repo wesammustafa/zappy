@@ -13,6 +13,7 @@ class TweetController {
     promises.formattedTweets = TweetService.format(tweets);
     promises.removedCount = TweetService.delete({});
     const { formattedTweets } = await Promise.props(promises);
+    global.io.emit('fetchTweets', { tweets: formattedTweets });
     return TweetService.save(formattedTweets, { ordered: true, rawResult: false });
   }
 
