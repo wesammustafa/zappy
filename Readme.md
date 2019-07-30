@@ -8,7 +8,7 @@ Integrates with a Slack channel and listens on specific messages. Zappy will lis
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
-- Node: v8.11.3 or higher - [Node](https://nodejs.org/en/) 
+- Node: v8.11.3 or higher - [Node](https://nodejs.org/en/)
 - Angular CLI: v6.0.8 - [Angular CLI](http://www.dropwizard.io/1.0.2/docs/) 
 - OS: linux x64
 - MongoDB: v3.6.3
@@ -59,7 +59,7 @@ Now lets walk through steps to test out app:
     JSDoc API documentation to document everything
     
 
-## Project Structure
+## Project Folder Structure
     ├── app.js
     ├── bin
     │   └── www
