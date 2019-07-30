@@ -1,6 +1,4 @@
-# Project Title
-
-Zappy – The Pain Killer
+# Zappy – The Pain Killer
 
 Integrates with a Slack channel and listens on specific messages. Zappy will listen on all messages containing the word “go”. As soon as any member of the marketing team, places a messages on a channel containing the message “go”, Zappy will fetch twitter feeds from the FictionFone account and saves in a mongo collection and view that fetched tweets show in a table
 
